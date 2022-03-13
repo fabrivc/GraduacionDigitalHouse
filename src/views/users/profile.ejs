@@ -1,0 +1,50 @@
+<%- include('../partials/head.ejs') %> 
+<body>
+<%- include('../partials/header.ejs') %>
+<main>
+    <link rel="stylesheet" href="/css/users/profile.css"/>
+    <section>
+        <h3 class="saludoBienvenida"> ¡Bienvenido a House of Wines <%=user.firstName%>!</h3>
+        <% if (user.avatar) { %>
+            <figure>
+                <img id="imgCentral"src="/avatars/<%=userLogged.avatar%> " alt="<%= user.firstName %> "class="avatar">
+            </figure>
+        
+        <% } else { %>
+            <figure>
+                <img id="imgCentral"src="/avatars/default-avatar.png" alt="avatar generico" class="avatar">
+            </figure>
+            
+         <% } %>
+
+    </section>
+    
+    <section>
+        <article class="datosProfile">
+            <h2 class="datosUsuario">Mis datos</h2>
+            <br>
+            <h3> <i class="fa-solid fa-user"></i> <%= user.firstName %> <%= user.lastName %></h3>
+            <br>
+            <h3> <i class="footer-icon fa fa-lg fa-fw fa-at"></i> <%= user.email %> </h3>
+            <br>
+            <h3> <i class="footer-icon fa fa-lg fa-fw fa-phone"></i> <%= user.phone %> </h3>
+            <br>
+            <h3> <i class="fa-solid fa-cake-candles"></i> <%= user.birthdate %> </h3>
+            <br>
+            <h3> <i class="footer-icon fa fa-lg fa-fw fa-map-marker-alt"></i><%= user.adress %></h3>
+        </article>
+    </section>
+    
+    <section>
+        <article class="datosProfile">
+            <h2 class="datosUsuario">Editar mi perfil</h2> 
+            <a class="boton-formulario" href='/users/userUpdate'>MODIFICAR</a>
+            <br>
+            <a class="boton-formulario" href="/">VOLVER</a>
+
+        </article>
+    </section>
+</main>
+
+<%- include('../partials/footer.ejs') %>
+</body>
