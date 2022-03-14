@@ -44,13 +44,13 @@ let cols = {
 
   let Product = sequelize.define(alias, cols, config);
 
-    Product.associate = function(models){
-      Product.belongsTo(models.Image,{
-        foreignKey:"ImagesID",
+  Product.associate = function(models){
+    Product.belongsTo(models.Image,{
+      foreignKey:"ImagesID",
         as: "images"
       });
       Product.belongsTo(models.Categorie,{
-        foreignKey:"Categories",
+        foreignKey:"Categories", 
         as: "categories"
       });
     }

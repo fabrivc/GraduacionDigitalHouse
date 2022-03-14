@@ -20,9 +20,9 @@ module.exports = function(sequelize, DataTypes){
 
   let Image = sequelize.define(alias, cols, config);
 
-    Image.associate = function(models){
-      Image.hasMany(models.Product,{
-        foreignKey:"ProductsID",
+  Image.associate = function(models){
+    Image.hasMany(models.Product,{
+      foreignKey:"ProductsID",
         as: "products"
       });
       Image.hasMany(models.User,{
