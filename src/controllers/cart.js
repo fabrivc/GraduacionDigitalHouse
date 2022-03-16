@@ -1,4 +1,4 @@
-//const model = require('../../disabled/data/models/cart')
+const db = require('../database/models')
 
 module.exports = {
     index: (req, res) =>  res.render('products/carrito', {
