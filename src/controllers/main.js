@@ -1,4 +1,4 @@
-//const model = require('../../disabled/data/models/product');
+
 //const file = require('../../disabled/data/models/file');
 //const user = require('../../disabled/data/models/user');
 //const db = require('../database/models')
