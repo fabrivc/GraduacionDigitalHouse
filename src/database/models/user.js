@@ -34,6 +34,7 @@ module.exports = function(sequelize, DataTypes){
         },
         avatar:{
           type: DataTypes.INTEGER,
+          allowNull: true,
         },
         admin:{
           type: DataTypes.BOOLEAN,
@@ -47,19 +48,18 @@ module.exports = function(sequelize, DataTypes){
   
       let User = sequelize.define(alias, cols, config);
   
-      User.associated = function(models){
+      User.associate = function(models){
         User.belongsTo(models.Image,{
-          foreignKey:"images_id",
+          foreignKey:"avatar",
           as: "image"
         });
-        // User.belongsToMany(models.Product,{
-        //   foreignKey:"userID",
-        //   through: "Users-Products",
-        //   otherKey:"productID",
-        //   as: "products",
-        //   timestamps: false
-        // });
+        User.belongsToMany(models.Product,{
+          foreignKey:"userID",
+          through: "Users-Products",
+          otherKey:"productID",
+          as: "products",
+          timestamps: false
+        });
       }
       return User;
     };
-  

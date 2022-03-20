@@ -6,7 +6,7 @@ const cookie = require('cookie-parser');
 const multer = require('multer');
 const app = express();
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3030);
 app.set('views', path.resolve(__dirname, './views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname, '../public')));
@@ -24,4 +24,4 @@ app.use(require('./middlewares/userLoggedMiddleware'));
 app.use('/users', require('./routes/userRoutes'));
 
 
-//app.use('/file/', require('./routes/fileRoutes'));
+app.use('/file/', require('./routes/fileRoutes'));

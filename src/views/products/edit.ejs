@@ -1,0 +1,41 @@
+<%- include('../partials/head.ejs') %> 
+<body>
+    <%- include('../partials/header.ejs') %>
+    <h1> <%- locals.title ? title : null %>  </h1>
+
+    <section id="prodedit">
+
+    <picture class="imagen">
+        <img src="<%=product.image%>"/>
+    </picture>
+
+    <form action="/products/<%- product.id %>?m=PUT" method="post" class='formulario'>
+        <label for="name" class="control-formulario"> Nombre del prducto:
+            <input type="text" id="name" minlength="3" maxlength="25" placeholder="<%= product.name %>" class="control" value=" <%= product.name %> "  required>
+        </label>
+        <label for="oldPrice" class="control-formulario"> Precio de lista:
+            <input type="number" id="oldPrice" min="0" placeholder=" $ <%= product.oldPrice %>" class="control" value=" <%= product.oldPrice %> " required>
+        </label>
+        <label for="discount" class="control-formulario"> Porcentaje de descuento:
+            <input type="number" id="discount" min="0" max="100" placeholder=" % <%= product.discount %>" class="control" value=" <%= product.discount %> " required>
+        </label>
+        
+        <label for="category" class="control-formulario"> Categoria:
+            <select id="category" name="category" class="control" required>
+                <option value="vinos" <%= product.category ? 'selected' : null  %> >Vinos</option>
+                <option value="espumantes" <%= product.category ? 'selected' : null  %> >Espumantes</option>
+                <option value="destilados" <%= product.category ? 'selected' : null  %> >Destilados</option>
+                <option value="whiskys" <%= product.category ? 'selected' : null  %> >Whiskys</option>
+                <option value="accesorios" <%= product.category ? 'selected' : null  %> >Accesorios</option>
+            </select>
+        </label>
+       <!--  <label for="description" class="control-formulario"></label>
+            <textarea id="description" rows="4" cols="30"  required>
+        </label> -->
+        <button type="submit">Enviar</button>
+
+    </form>
+</section>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

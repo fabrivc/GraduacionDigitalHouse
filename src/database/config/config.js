@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "how_db",
+    "database": "houseofwinesdb",
     "host": "127.0.0.1",
     "dialect": "mysql",
   },
