@@ -9,7 +9,7 @@ window.addEventListener('load', function () {
     }
     console.log('data:',data);
 
-    const url = 'http://localhost:3030/users/register';
+    const url = 'http://localhost:3000/users/register';
     fetch( url, {
       method:'POST',
       body: JSON.stringify(data),

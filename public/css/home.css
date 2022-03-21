@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    background-color: white;
 }
 
 a{
@@ -12,24 +13,24 @@ a{
 }
 
 main {
-    background-color: #f5f5f5;
-    border: solid 2px #550c18;
+    background-color: white;
+    border: solid 2px #EF5D5D;
     
 }
 .bienvenida{
     margin: 50px;
     padding: auto;
     font-size: 70px;
-    color: #791223;
+    color: #EF5D5D;
     text-align: center;
 }
 
-.linea{
+/* .linea{
     border-top: 1px solid rgb(153, 150, 150);
     height: 2px;
     padding: 0;
-    margin: 20px auto 0 auto;
-}
+    margin: 20px auto 0 auto; */
+/* } */
 
 .destacados{
     margin: 30px;
@@ -67,7 +68,7 @@ main {
 }
 .producto {
     margin: 10px 20px;
-    background-color: rgb(85, 12, 24, 70%);
+   background-color: #EF5D5D;;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
@@ -101,7 +102,7 @@ main {
 }
 
 .edit {
-    color: #f5f5f5;
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -111,14 +112,14 @@ main {
 }
 
 .edit a {
-    color: #f5f5f5;
+    color: white;
     font-size: 20px;
 }
 
 .edit form button {
-    color: #f5f5f5;
+    color: white;
     font-size: 20px;
-    background-color: rgb(85, 12, 24, 70%);
+    background-color: #EF5D5D;;
     border: none;
 }
 
