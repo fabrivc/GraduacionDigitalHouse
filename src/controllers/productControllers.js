@@ -11,7 +11,7 @@ const productControllers = {
             return res.render('products/create', 
             { 
                 styles: ['products/create'],
-                title:'House of Wines | Creá un Producto nuevo',
+                title:'Fabri Whiskey| Creá un Producto nuevo',
                 categoria: categoria 
             });
         })
@@ -44,7 +44,7 @@ const productControllers = {
             res.render('products/list', 
             {
                 styles: ['product/list'],
-                title:'House of Wines | Productos',
+                title:'Fabri Whiskey | Productos',
                 products: products
             })
         })
@@ -58,7 +58,7 @@ const productControllers = {
             res.render('/products/detail', 
             {
                 styles: ['products/detail', 'home'],
-                title: 'House of Wines | ' + product.name,
+                title: 'Fabri Whiskey | ' + product.name,
                 product: product,
             })
         })
@@ -72,7 +72,7 @@ const productControllers = {
             res.render('products/edit', 
             { 
                 styles: ['products/edit', 'main'],
-                title: 'House of Wines | Editar producto',
+                title: 'Fabri Whiskey',
                 product: product, 
                 category: category
             })

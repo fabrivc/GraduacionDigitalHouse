@@ -6,7 +6,7 @@ module.exports = {
         .then(function(products){
             res.render('home', {
         styles: ['home'],
-        title: 'House of Wines | Home',
+        title: 'Fabri Whiskeys',
         products: products
         })
     })
