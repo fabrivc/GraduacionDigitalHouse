@@ -31,7 +31,7 @@ const userController = {
             phone: req.body.phone,
             adress: req.body.adress,
             avatar: ImagenAvatar.id,
-            admin: String(req.body.email).includes('@how')? 1 : 0,
+            admin: String(req.body.email).includes('@whisky')? 1 : 0,
           }).then(user => {
               res.redirect('/users/login');
           

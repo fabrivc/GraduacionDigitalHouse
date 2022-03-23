@@ -5,7 +5,7 @@ const {body} = require('express-validator');
 const validations = [
     body("email").notEmpty().withMessage('Ingresar email').bail().
     isEmail().withMessage("Email inválido"),
-    body('password').matches(/^.*(?=.{6,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/)
+    body('password').matches(/^.*(?=.{6,20})(?=.*[a-z-A-Z])(?=.*\d)(?=.).*$/)
     .isLength({ min: 6}).withMessage('Mínimo 6 caracteres, 1 letra, 1 número y 1 character especial'),
    
     body("firstName").notEmpty().withMessage('Ingresar nombre'),
