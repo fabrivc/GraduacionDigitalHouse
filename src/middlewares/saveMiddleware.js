@@ -11,7 +11,7 @@ const validations = [
     body("firstName").notEmpty().withMessage('Ingresar nombre'),
     body("lastName").notEmpty().withMessage('Ingresar apellido'),
 
-    body('phone').isNumeric().withMessage('*Este campo debe ser numérico'),
+    body('phone').isNumeric().withMessage('Este campo debe ser numérico'),
 
 ]
 module.exports = validations;
